@@ -17,7 +17,7 @@ select * from dept;
 select sum(salary) as "Total Salary" from employee where deptId=(select deptId from dept where deptName="marketing");
 alter table employee drop empname;
 select * from employee;
-alter table employee add city;
+alter table employee add city varchar(32);
 select * from employee;
 update employee 
 set city="FSD" where empid="e001";
@@ -25,4 +25,8 @@ update employee
 set city="ISB" where empid="e003";
 update employee 
 set city="LHR" where empid="e004";
-select * from employee;
+update employee
+ set city="sami" where empid="e001";
+ alter table employee add regNo varchar(30);
+ update employee 
+ set regNo="2020-gcuf-000825" , city="lahore" where empid="e001";
